@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+
+.nav-link-hover-gradient {
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link-hover-gradient::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0;
+    background: #3b82f6;
+    transition: width 0.3s ease;
+}
+
+.nav-link-hover-gradient:hover {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Underline on hover */
+.nav-link-hover-gradient:hover::after {
+    width: 100%;
+}
+
+/* Gradient text and underline when active */
+.nav-link-hover-gradient.active {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-link-hover-gradient.active::after {
+    width: 100%;
+}
+
+.features {
+    padding: 80px 0;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 50px 0;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+}
