@@ -47,3 +47,39 @@
     border-radius: 20px;
     backdrop-filter: blur(10px);
 }
+
+.loader-anim-path {
+    width: 35px;
+    height: 40px;
+    border: 7px solid rgba(22, 6, 6, 0.25);
+    display: inline-block;
+    align-self: center;
+    border-radius: 50%;
+    position: relative;
+}
+
+.loader-anim {
+    width: 30px;
+    height: 30px;
+    border-left: 3px solid rgba(189, 189, 189, 0.25);
+    border-top: 3px solid rgba(189, 189, 189, 0.25);
+    display: inline-block;
+    align-self: center;
+    position: absolute;
+    left: -5px;
+    top: -3px;
+    border-color: rgba(3, 155, 229, 1);
+    /* border-top-color: rgba(3, 155, 229, 1); */
+    border-radius: 50%;
+    animation: rotate 600ms infinite;
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+.bg {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
